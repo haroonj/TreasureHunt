@@ -1,18 +1,21 @@
 /* Base styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f5;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
 h1 {
-    color: #333;
+    color: #2c3e50;
     text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 form {
@@ -21,6 +24,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     width: 300px;
+    margin-top: 20px; /* Adds vertical space */
 }
 
 label {
@@ -38,16 +42,73 @@ input, select {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #3498db; /* Unified button color */
     color: white;
     padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for topic buttons */
+.topic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Styling for topic buttons */
+.topic-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topic-button:hover, .topic-button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .topic-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+.continue-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+    background-color: #2980b9;
 }

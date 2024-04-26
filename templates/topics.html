@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Topic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Choose Your Adventure Topic</h1>
+    <div class="topic-container">
+        {% for topic in topics %}
+        <form action="{{ url_for('topics') }}" method="post">
+            <input type="hidden" name="topic" value="{{ topic }}">
+            <button type="submit" class="topic-button">{{ topic }}</button>
+        </form>
+        {% endfor %}
+    </div>
+</body>
+</html>
