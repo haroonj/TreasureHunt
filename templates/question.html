@@ -8,14 +8,17 @@
 </head>
 <body>
 <div class="container">
-    <div class="question-text">
-        <h1>{{ question }}</h1>
+    <div class="question-section">
+        <div class="question-text">
+            <h1>{{ question }}</h1>
+        </div>
+        <img src="https://img.freepik.com/free-vector/colorful-science-objects-icons-vector-set_1308-131708.jpg" alt="Relevant Description" class="question-image">
     </div>
+
     <div class="options-form">
         <form action="{{ url_for('question') }}" method="post">
             {% for choice in choices %}
             <button type="button" class="choice-button" onclick="selectAnswer(this, '{{ choice }}');">
-
                 {{ choice }}
             </button>
             {% endfor %}

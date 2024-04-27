@@ -16,9 +16,19 @@ body {
     margin: auto;
 }
 
-.question-text {
+.question-section {
     flex: 1;
-    margin-right: 20px; /* Adds some space between the text and the form */
+    margin-right: 20px; /* Space between question/image and options */
+}
+
+.question-text {
+    /* No specific changes needed here, just included for context */
+}
+
+.question-image {
+    width: 100%; /* Adjust width as needed, could be less than 100% if too large */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between the question text and the image */
 }
 
 .options-form {
