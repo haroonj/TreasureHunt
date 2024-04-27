@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>{{ question }}</h1>
-    <form action="{{ url_for('question') }}" method="post">
-        {% for choice in choices %}
-            <label>
-                <input type="radio" name="answer" value="{{ choice }}" required>
-                {{ choice }}
-            </label><br>
-        {% endfor %}
-        <button type="submit">Submit Answer</button>
-    </form>
+<h1>{{ question }}</h1>
+<form action="{{ url_for('question') }}" method="post">
+    {% for choice in choices %}
+        <label>
+            <input type="radio" name="answer" value="{{ choice }}" required>
+            {{ choice }}
+        </label>
+    {% endfor %}
+    <button type="submit">Submit Answer</button>
+</form>
 </body>
 </html>
