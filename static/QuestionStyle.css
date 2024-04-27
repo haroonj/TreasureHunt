@@ -1,63 +1,93 @@
-/* Form Container */
-form {
-    background-color: white;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    width: 100%; /* Adjust width as needed */
-    max-width: 600px; /* Consistent with other forms */
-    margin: 20px auto; /* Center the form on the page */
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your preference */
+    margin: auto;
+}
+
+.question-text {
+    flex: 1;
+    margin-right: 20px; /* Adds some space between the text and the form */
+}
+
+.options-form {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Aligns buttons to the left */
 }
 
-/* Choice Buttons */
-.choice-button {
+.choice-button, .hint {
+    width: 100%; /* Full width within the form */
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
     background-color: #3498db;
     color: white;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%; /* Full width for better touch targets */
-    text-align: left;
-    transition: background-color 0.3s ease, box-shadow 0.2s ease;
-}
-
-.choice-button:hover {
-    background-color: #2980b9;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-/* Submit and Hint Buttons */
-button.submit, button.hint {
-    width: 100%;
-    padding: 12px 20px;
-    margin-top: 10px;
-    border-radius: 4px;
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button.submit {
-    background-color: #3498db;
-    color: white;
-}
-
-button.hint {
-    background-color: #f39c12;
-    color: white;
-}
-
-button.submit:hover {
+.choice-button:hover {
     background-color: #2980b9;
 }
-
-button.hint:hover {
-    background-color: #d35400;
+.choice-button.selected {
+    background-color: #0069b1;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+
+.submit {
+    background-color: #27ae60; /* Changed to a green color for a 'go' feel */
+    color: white;
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Larger font size for better readability */
+    border-radius: 6px; /* Rounded corners for a smoother look */
+    border: none;
+    cursor: pointer;
+    width: auto; /* Adjust width as needed, or use full width for emphasis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for a 3D effect */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions for interactive feedback */
+}
+
+.submit:hover {
+    background-color: #2ecc71; /* A lighter green on hover for visual feedback */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover for more depth */
+}
+
+
+.hint {
+    background-color: #f39c12; /* Changed to a green color for a 'go' feel */
+    color: white;
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Larger font size for better readability */
+    border-radius: 6px; /* Rounded corners for a smoother look */
+    border: none;
+    cursor: pointer;
+    width: auto; /* Adjust width as needed, or use full width for emphasis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for a 3D effect */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions for interactive feedback */
+}
+
+.hint:hover {
+    background-color: #d35400; /* A lighter green on hover for visual feedback */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover for more depth */
+}
+
+
+
+
