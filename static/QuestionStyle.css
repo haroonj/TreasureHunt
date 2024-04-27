@@ -1,52 +1,63 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-}
-
-h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
+/* Form Container */
 form {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    width: auto;
-    max-width: 600px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px; /* Consistent with other forms */
+    margin: 20px auto; /* Center the form on the page */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-button {
+/* Choice Buttons */
+.choice-button {
     background-color: #3498db;
     color: white;
     padding: 12px 20px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width for better touch targets */
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.choice-button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Submit and Hint Buttons */
+button.submit, button.hint {
     width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.submit {
+    background-color: #3498db;
+    color: white;
+}
+
+button.hint {
+    background-color: #f39c12;
+    color: white;
+}
+
+button.submit:hover {
     background-color: #2980b9;
+}
+
+button.hint:hover {
+    background-color: #d35400;
 }
